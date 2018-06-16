@@ -1,0 +1,25 @@
+<h1>Customer Listing</h1>
+<p>Here are all the customers in Brandon's Fruit Stand database: </p>
+
+<table> 
+
+    <tr>
+        <th> Name </th>
+        <th> Email </th>
+        <th> Phone Number </th>
+        <th> Address </th>
+        <th> City </th>
+        <th> State </th>
+    </tr>
+      
+    <% @customerdata.each do |c| %>
+        <tr> 
+            <td> <%= c.firstname + " "+ c.lastname %> </td>
+            <td> <%= c.email %> </td>
+            <td> <%= number_to_phone(c.phone) %> </td>
+            <td> <%= c.address %> </td>
+            <td> <%= c.city %> </td>
+            <td> <%= c.state %> </td>
+        </tr>
+    <% end %>
+</table>

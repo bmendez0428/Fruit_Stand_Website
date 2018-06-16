@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  suppliername: MyString
+  suppliercity: MyString
+  supplierstate: MyString
+  fruitselection: MyString
+  fruitimportweight: 1.5
+
+two:
+  suppliername: MyString
+  suppliercity: MyString
+  supplierstate: MyString
+  fruitselection: MyString
+  fruitimportweight: 1.5

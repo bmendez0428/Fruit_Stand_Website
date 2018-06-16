@@ -1,0 +1,24 @@
+<h1>Product Listing</h1>
+<p>Here are all the fruit that Brandon's Fruit Stand sells</p>
+
+<table> 
+
+    <tr>
+        <th> Fruit Name </th>
+        <th> Source </th>
+        <th> Price Per Pound</th>
+        <th> Image </th>
+        <th> Current Inventory (lbs)</th>
+   
+    </tr>
+      
+    <% @productdata.each do |c| %>
+        <tr> 
+            <td> <%= c.fruitname%> </td>
+            <td> <%= c.supplier %> </td>
+            <td> <%= number_to_currency(c.price) %> </td>
+            <td> <%= c.imagepath %> </td>
+            <td> <%= c.currentinventoryweight %></td>
+
+        </tr>
+    <% end %>

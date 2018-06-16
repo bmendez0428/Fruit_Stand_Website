@@ -1,0 +1,33 @@
+<p> <h1>Search</h1> </p>
+
+<%= form_tag :action => 'search' do %>
+	<p>What fruit are you looking for?: 
+	<%= text_field_tag 'searchinput', @searchinput %> </p>
+	<hr/>
+	<% if @results>0 %>
+		<% if @products.length >0 %>
+			<p> Here are the search results:</p>
+			<p>
+			<table>
+			<tr>
+				<th>Image</th>
+				<th>Fruit Name</th>
+				<th>Description</th>
+			</tr>
+			<% @products .each do |f| %>
+				<tr>
+				
+				<td><%= f.imagepath %></td>
+				<td><%= f.fruitname %></td>
+				<td> <%= f.description %></td>
+				</tr>
+			<% end %>
+			</table>
+
+		<% else%>
+			<p>There were no fruits with your search criteria. Try again!</p>
+		<% end %>
+	<% end %>
+
+	<%= submit_tag 'Search' %>
+<% end %>

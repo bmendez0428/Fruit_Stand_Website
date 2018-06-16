@@ -1,0 +1,11 @@
+<h1>Welcome to Brandon's Fruit Store</h1>
+<p>Get fruit delivered to you next day</p>
+
+   
+	<td width='20%'>
+		<% @promotion.each do |p| %>
+			<hr>
+			<%= image_tag p.imagepath, size:'200x200', alt:p.description %> </br>
+		<% end %>
+	</td>
+</table>

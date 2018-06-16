@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  revenue: 1.5
+  fruitsold: 1
+  fruittypesold: MyString
+
+two:
+  revenue: 1.5
+  fruitsold: 1
+  fruittypesold: MyString

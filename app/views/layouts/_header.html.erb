@@ -1,0 +1,31 @@
+<table bgcolor='cornsilk' width="100%"> <tr>
+    <td align='left'> <%= link_to (image_tag 'fruitlogo.png', size:"70x70" ), home_index_path%></td>
+    <td align='left'> <h1>Brandon's Fruit Stand</h1></td>
+    
+    <td width='35%' align='right'>
+        <%= form_tag :action => 'search', :controller => 'home' do %>
+            <p> Search
+            <%= text_field_tag 'searchinput', @searchinput %> 
+            <%= submit_tag 'Go' %> </p>
+        <% end %>
+    </td>
+    <td width='15%' align='center'>
+		<% if session[:user_id].nil? %>
+			<%= link_to "New Customer", new_customer_path %>
+			<%= button_to 'Login', login_path, :method => :get %>
+		<% else %>
+			Hello <%= Customer.find(session[:user_id]).firstname %> !
+			<%= button_to 'Logout', logout_path, :method => :delete %>
+		<% end %>
+		<p><%= link_to (image_tag "cart.png", size:"50x50"), home_cart_path %></p>
+        </td>
+    </tr></table>
+<ul>
+    <li><%= link_to "Home", home_index_path %></li>
+    <li><%= link_to "About Us", home_about_path %></li>
+    <li> <%= link_to "Store", products_path %></li>
+    <li> <%= link_to "Our Suppliers", suppliers_path %> </li>
+    <li><%= link_to "Reports", report_reportlist_path%></li>
+    <li><%= link_to "Promotions", promotions_path %></li>
+<li> </li>
+</ul>

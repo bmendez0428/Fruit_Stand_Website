@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fruitsales</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Fruit</th>
+      <th>Saleprice</th>
+      <th>Purchasedate</th>
+      <th>Status</th>
+      <th>Purchase</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fruitsales.each do |fruitsale| %>
+      <tr>
+        <td><%= fruitsale.customer_id %></td>
+        <td><%= fruitsale.fruit_id %></td>
+        <td><%= fruitsale.saleprice %></td>
+        <td><%= fruitsale.purchasedate %></td>
+        <td><%= fruitsale.status %></td>
+        <td><%= fruitsale.purchase_id %></td>
+        <td><%= fruitsale.created_at %></td>
+        <td><%= fruitsale.updated_at %></td>
+        <td><%= link_to 'Show', fruitsale %></td>
+        <td><%= link_to 'Edit', edit_fruitsale_path(fruitsale) %></td>
+        <td><%= link_to 'Destroy', fruitsale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fruitsale', new_fruitsale_path %>

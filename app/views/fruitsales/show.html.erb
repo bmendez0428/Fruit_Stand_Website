@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @fruitsale.customer_id %>
+</p>
+
+<p>
+  <strong>Fruit:</strong>
+  <%= @fruitsale.fruit_id %>
+</p>
+
+<p>
+  <strong>Saleprice:</strong>
+  <%= @fruitsale.saleprice %>
+</p>
+
+<p>
+  <strong>Purchasedate:</strong>
+  <%= @fruitsale.purchasedate %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @fruitsale.status %>
+</p>
+
+<p>
+  <strong>Purchase:</strong>
+  <%= @fruitsale.purchase_id %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @fruitsale.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @fruitsale.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_fruitsale_path(@fruitsale) %> |
+<%= link_to 'Back', fruitsales_path %>

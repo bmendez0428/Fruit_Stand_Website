@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fruitname: MyString
+  supplier: MyString
+  color: MyString
+  description: MyText
+  price: 1
+  currentinventoryweight: 1
+  imagepath: MyString
+
+two:
+  fruitname: MyString
+  supplier: MyString
+  color: MyString
+  description: MyText
+  price: 1
+  currentinventoryweight: 1
+  imagepath: MyString

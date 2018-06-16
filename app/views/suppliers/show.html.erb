@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Suppliername:</strong>
+  <%= @supplier.suppliername %>
+</p>
+
+<p>
+  <strong>Suppliercity:</strong>
+  <%= @supplier.suppliercity %>
+</p>
+
+<p>
+  <strong>Supplierstate:</strong>
+  <%= @supplier.supplierstate %>
+</p>
+
+<p>
+  <strong>Fruitselection:</strong>
+  <%= @supplier.fruitselection %>
+</p>
+
+<p>
+  <strong>Fruitimportweight:</strong>
+  <%= @supplier.fruitimportweight %>
+</p>
+
+<%= link_to 'Edit', edit_supplier_path(@supplier) %> |
+<%= link_to 'Back', suppliers_path %>
